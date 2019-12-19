@@ -1,4 +1,3 @@
-
 resource "aws_instance" "web" {
   count = 10
   ami             = "ami-00068cd7555f543d5"
@@ -8,9 +7,8 @@ resource "aws_instance" "web" {
   security_groups = ["allow_ssh"]
   user_data = file("userdata_file")
 
-tags = {
-    Name = "HelloWorld"
+  tags = {
+    Name = "HelloWorld${count.index +1}"
   }
 }
-
 
