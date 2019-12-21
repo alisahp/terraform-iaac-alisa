@@ -18,6 +18,7 @@ resource "aws_instance" "web" {
         "sudo systemctl start httpd",
         ]
       }
+
   lifecycle{
     prevent_destroy = false
   }
