@@ -8,4 +8,4 @@ s3_tfstate_file = "infrastructure.tfstate"        #Will be used to set backend.t
 
 ami                                = "ami-00068cd7555f543d5"
 instance_type                      = "t2.micro"
-key_name                           = "Asus_Ohio"
+key_name                           = "terraform"
