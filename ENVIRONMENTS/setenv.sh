@@ -36,12 +36,6 @@ if [ ! -f "$DATAFILE" ]; then
     return 1 
 fi 
 
- 
-
- 
-
- 
-
 # Get env from DATAFILE 
 ENVIRONMENT=$(sed -nr 's/^\s*environment\s*=\s*"([^"]*)".*$/\1/p' "$DATAFILE") 
 S3BUCKET=$(sed -nr 's/^\s*s3_bucket\s*=\s*"([^"]*)".*$/\1/p' "$DATAFILE") 
@@ -81,23 +75,13 @@ then
    echo "e.g. s3_tfstate_file=\"infrastructure.tfstate\"" 
 return 1 
 fi 
-
 cat << EOF > "$DIR/backend.tf" 
-
 terraform { 
-
 backend "s3" { 
-
 bucket = "${S3BUCKET}" 
-
 key = "${S3BUCKETPROJ}/${S3BUCKETREGION}/${S3BUCKETTYPE}/${ENVIRONMENT}/${S3TFSTATEFILE}" 
-
 region = "${S3BUCKETREGION}" 
-
   } 
-
 } 
-
 EOF 
-
 cat backend.tf 
