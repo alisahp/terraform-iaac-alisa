@@ -3,12 +3,12 @@ resource "aws_iam_user" "tim" {
    path = "/" 
 } 
 
-resource "aws_iam_user" "tim" { 
+resource "aws_iam_user" "developers" { 
    name = "developers" 
    path = "/" 
 } 
 
-resource "aws_iam_group_membership" "developers" { 
+resource "aws_iam_group_membership" "developers_team" { 
   name = "developers-group-membership" 
   users = [ 
     aws_iam_user.tim.name 
