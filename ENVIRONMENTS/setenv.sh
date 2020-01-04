@@ -15,13 +15,6 @@ then
    return 1 
 fi 
 
- 
-
- 
-
- 
-
- 
 
 # Get directory we are running from 
 DIR=$(pwd) 
@@ -35,7 +28,6 @@ if [ ! -f "$DATAFILE" ]; then
     echo "setenv: Configuration file not found: $DATAFILE" 
     return 1 
 fi 
-
 # Get env from DATAFILE 
 ENVIRONMENT=$(sed -nr 's/^\s*environment\s*=\s*"([^"]*)".*$/\1/p' "$DATAFILE") 
 S3BUCKET=$(sed -nr 's/^\s*s3_bucket\s*=\s*"([^"]*)".*$/\1/p' "$DATAFILE") 
