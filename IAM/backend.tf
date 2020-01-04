@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "backend-state-alisa"
-    key    = "aws/iam/iam_state"
+    key    = "infrastructure"
     region = "us-east-1"
   }
 }
