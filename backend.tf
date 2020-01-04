@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "my-tf-test-bucket-alisait"
+    bucket = "terraform-us-virgin"
     key    = "aws/iam/iam_state"
-    region = "eu-west-1"
+    region = "us-east-1"
   }
 }
