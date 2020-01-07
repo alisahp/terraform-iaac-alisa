@@ -3,6 +3,5 @@ variable "name" {
 }
 
 variable "cidr" {
-  
 }
 
