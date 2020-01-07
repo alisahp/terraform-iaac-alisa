@@ -1,4 +1,3 @@
-
 environment = "dev" 
 s3_bucket = "terraform-us-virgin"                 #Will be used to set backend.tf 
 s3_folder_project = "application"                 #Will be used to set backend.tf 
@@ -8,5 +7,7 @@ s3_tfstate_file = "infrastructure.tfstate"        #Will be used to set backend.t
 
 name = "wordpress1"
 cidr = "10.0.0.0/16"
-
+azs1 = "us-east-1a"
+azs2 = "us-east-1b"
+azs3 = "us-east-1c"
 
