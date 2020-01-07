@@ -10,19 +10,7 @@ module "bucket1" {
 
 
 
-module "bucket1" {
-  source = "./modules"
-  bucketname = "some-made-up-bucket-alisa"
-}
 
 
-module "bucket1" {
-  source = "./modules"
-  bucketname = "some-made-up-bucket-alisa"
-}
 
 
-module "bucket1" {
-  source = "./modules"
-  bucketname = "some-made-up-bucket-alisa"
-}
