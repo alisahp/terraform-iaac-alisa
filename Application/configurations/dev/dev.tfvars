@@ -1,4 +1,3 @@
-name                  = "wordpress1"
 
 environment = "dev" 
 s3_bucket = "terraform-us-virgin"                 #Will be used to set backend.tf 
