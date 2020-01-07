@@ -4,25 +4,25 @@ provider "aws"{
 
  
 module "bucket1" {
-  source = "./module"
+  source = "./modules"
   bucketname = "some-made-up-bucket-alisa"
 }
 
 
 
 module "bucket1" {
-  source = "./module"
+  source = "./modules"
   bucketname = "some-made-up-bucket-alisa"
 }
 
 
 module "bucket1" {
-  source = "./module"
+  source = "./modules"
   bucketname = "some-made-up-bucket-alisa"
 }
 
 
 module "bucket1" {
-  source = "./module"
+  source = "./modules"
   bucketname = "some-made-up-bucket-alisa"
 }
