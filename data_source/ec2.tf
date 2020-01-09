@@ -7,9 +7,17 @@ provider "aws" {
 
 # Search for Ubuntu Latest with the owner
 data "aws_ami" "ubuntu" {
+  filter { 
+    name = "root-device-type" 
+    values = ["ebs"] 
+    }
+
   most_recent = true 
   owners = ["099720109477"]
 }
+
+
+
 
 
 
