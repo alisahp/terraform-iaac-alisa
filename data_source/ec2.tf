@@ -6,7 +6,7 @@ provider "aws" {
 
 
 # Search for Ubuntu Latest with the owner
-data "aws_ami" "ubuntu" { 
+data "aws_ami" "ubuntu" {
   most_recent = true 
   owners = ["099720109477"]
 }
@@ -14,6 +14,6 @@ data "aws_ami" "ubuntu" {
 
 
 # Show the AMI id
-output "ami" { 
+output "ami" {
   value = "${data.aws_ami.ubuntu.id}" 
 }
