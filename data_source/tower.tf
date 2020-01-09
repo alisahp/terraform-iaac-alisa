@@ -47,3 +47,4 @@ resource "aws_route53_record" "tower" {
   ttl     = "300" 
   records = [aws_instance.tower.public_ip] 
 }
+}
