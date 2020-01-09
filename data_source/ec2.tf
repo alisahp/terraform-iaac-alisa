@@ -1,15 +1,15 @@
 # Go to Region us-east-2
-provider "aws" { 
+provider "aws" {
   region = "us-east-2" 
-} 
+}
 
 
 
 # Search for Ubuntu Latest with the owner
 data "aws_ami" "ubuntu" { 
   most_recent = true 
-  owners = ["099720109477"] 
-} 
+  owners = ["099720109477"]
+}
 
 
 
