@@ -1,9 +1,3 @@
-# Go to Region us-east-2
-provider "aws" {
-  region = "us-east-1" 
-}
-
-
 
 # Search for Centos Latest with the owner
 data "aws_ami" "centos" {
@@ -30,15 +24,15 @@ resource "aws_key_pair" "towerkey" {
   public_key = file("~/.ssh/id_rsa.pub")
 }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "tower" {
   ami           = data.aws_ami.centos.id
   instance_type = "t2.micro"
   key_name = aws_key_pair.towerkey.key_name
    provisioner "remote-exec" {
        connection {
-           host        = self.public_ip
-           type        = "ssh"
-           user        = "centos"
+           host = self.public_ip
+           type = "ssh"
+           user = "centos"
            private_key = file(var.ssh_key_location)
       }
     inline = [ 
@@ -55,5 +49,5 @@ resource "aws_route53_record" "tower" {
   name    = "dev.mybestsea.com" 
   type    = "A" 
   ttl     = "300" 
-  records = [aws_instance.web.public_ip] 
+  records = [aws_instance.tower.public_ip] 
 }
