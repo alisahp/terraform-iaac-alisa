@@ -39,6 +39,7 @@ resource "aws_instance" "tower" {
     Name = "HelloWorld"
   }
 }
+}
 
 resource "aws_route53_record" "tower" { 
   zone_id = "Z3CBLHLXVTONQ5" 
@@ -46,5 +47,4 @@ resource "aws_route53_record" "tower" {
   type    = "A" 
   ttl     = "300" 
   records = [aws_instance.tower.public_ip] 
-}
 }
