@@ -12,7 +12,7 @@ data "aws_ami" "centos" {
   most_recent = true 
   owners = ["679593333241"]
 }
-
+}
 
 
 resource "aws_key_pair" "towerkey" {
