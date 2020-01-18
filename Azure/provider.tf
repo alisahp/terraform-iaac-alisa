@@ -99,7 +99,7 @@ resource "azurerm_virtual_machine" "vm1" {
   os_profile {
     computer_name = "vm1"
     admin_username = "centos"
-    admin_password = "Password1234!"
+    admin_password = "Password1234"
 }
   os_profile_linux_config {
   disable_password_authentication = false
