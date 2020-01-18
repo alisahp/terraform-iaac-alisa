@@ -4,4 +4,5 @@ terraform {
     storage_account_name = "alisait1"
     container_name       = "alisaitcontainer"
     key                  = "prod.terraform.tfstate"
+    access_key           = ""
   }
